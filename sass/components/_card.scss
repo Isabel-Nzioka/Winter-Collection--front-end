@@ -1,0 +1,71 @@
+.card {
+  height: 55rem;
+  position: relative;
+
+  //   background-color: rosybrown;
+
+  &__newCollection {
+    height: 55rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+
+    // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 40rem;
+    border-top-left-radius: 12rem;
+    border-top-right-radius: 12rem;
+    border-bottom-left-radius: 12rem;
+    border-bottom-right-radius: 12rem;
+
+    &--1 {
+      background-image: url(../img/pic-3.png);
+    }
+
+    &--2 {
+      background-image: url(../img/pic-4.png);
+    }
+
+    &--3 {
+      background-image: url(../img/pic-6.png);
+    }
+
+    &--4 {
+      background-image: url(../img/pic-33.png);
+    }
+    &--5 {
+      background-image: url(../img/img-77.jpg);
+    }
+    &--6 {
+      background-image: url(../img/pic-2.png);
+    }
+    &--7 {
+      background-image: url(../img/img-11.png);
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+  }
+
+  &__price-d,
+  &__price-value {
+    text-align: center;
+
+    padding: 1rem;
+  }
+
+  &__price-d {
+    font-size: 1.4rem;
+  }
+  &__price-value {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+}

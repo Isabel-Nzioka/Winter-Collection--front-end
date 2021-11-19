@@ -1,0 +1,35 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+
+    &--p1 {
+      left: 8rem;
+      top: -5rem;
+
+      transform: rotate(-20deg);
+    }
+
+    &--p2 {
+      left: 10rem;
+      top: -2rem;
+
+      transform: rotate(20deg);
+    }
+  }
+}
+
+// .stories {
+//   position: relative;
+//   width: 50rem;
+
+//   &__photo {
+//     width: 80%;
+//     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+//     border-radius: 2px;
+//     // position: absolute;
+//   }
