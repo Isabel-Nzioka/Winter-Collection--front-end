@@ -1,11 +1,20 @@
 nav {
-  //   background-color: $color-3;
+  // background-color: $color-77;
   position: fixed;
+
   top: 0;
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
   color: $color-6;
+  // background-color: $color-3;
+  // color: $color-6;
+
+  // &.active {
+  //   background-color: $color-3;
+  // }
+
+  // border-bottom: 1px solid $color-5;
 }
 
 .navigation {
@@ -20,15 +29,19 @@ nav {
 
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
-
+    letter-spacing: 3px;
     padding-left: 6.5rem;
+
+    .highlight {
+      color: $color-11;
+    }
   }
 
   &__list {
     display: flex;
     list-style: none;
     align-items: center;
-    align-items: center;
+    justify-content: center;
   }
 
   &__item {
@@ -39,7 +52,7 @@ nav {
     &:link,
     &:visited {
       padding: 1rem 1rem;
-      color: $color-6;
+      color: $color-77;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
       text-transform: uppercase;
@@ -49,7 +62,48 @@ nav {
 
     &:hover,
     &:active {
-      color: $color-11;
+      color: $color-b1;
     }
   }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+    div {
+      width: 2.5rem;
+      height: 0.4rem;
+      background-color: yellow;
+      margin: 0.5rem;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  body {
+    overflow: hidden;
+  }
+
+  .navigation__list {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    transform: translateX(100%);
+  }
+  .navigation__item .navigation__link {
+    color: red;
+    opacity: 0;
+  }
+  .navigation__burger {
+    display: block;
+  }
+}
+
+.navigation__burger div:hover {
+  background-color: red;
 }

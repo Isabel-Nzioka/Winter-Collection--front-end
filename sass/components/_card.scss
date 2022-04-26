@@ -2,10 +2,14 @@
   height: 55rem;
   position: relative;
 
-  //   background-color: rosybrown;
+  // background-color: rosybrown;
+
+  @include respond(tab-port) {
+    height: 45rem;
+  }
 
   &__newCollection {
-    height: 55rem;
+    height: 60rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -13,7 +17,13 @@
     border-radius: 3px;
     overflow: hidden;
 
+    padding: 3rem;
+
     // box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    @include respond(tab-port) {
+      height: 50rem;
+    }
   }
 
   &__picture {
@@ -24,6 +34,15 @@
     border-bottom-left-radius: 12rem;
     border-bottom-right-radius: 12rem;
 
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.9);
+
+    @include respond(tab-port) {
+      height: 30rem;
+      border-top-left-radius: 6rem;
+      border-top-right-radius: 6rem;
+      border-bottom-left-radius: 6rem;
+      border-bottom-right-radius: 6rem;
+    }
     &--1 {
       background-image: url(../img/pic-3.png);
     }
@@ -40,13 +59,18 @@
       background-image: url(../img/pic-33.png);
     }
     &--5 {
-      background-image: url(../img/img-77.jpg);
+      background-image: url(../img/adb1.png);
     }
     &--6 {
-      background-image: url(../img/pic-2.png);
+      background-image: url(../img/image-2.png);
     }
     &--7 {
       background-image: url(../img/img-11.png);
+    }
+
+    &:hover {
+      transform: translateY(-0.9rem) scale(1.0025);
+      box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -66,6 +90,6 @@
   }
   &__price-value {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 300;
   }
 }

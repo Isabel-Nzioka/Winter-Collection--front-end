@@ -7,23 +7,39 @@ body {
 }
 
 .heading-primary {
-  color: $color-6;
+  color: $color-3;
   text-transform: uppercase;
+  font-family: " Montserrat";
 
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
+  // z-index: 1000;
+
+  @include respond(tab-port) {
+    margin-bottom: 1.5rem;
+  }
 
   &--one {
     display: block;
-    font-size: 4rem;
-    letter-spacing: 2.5rem;
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
     font-weight: 400;
+
+    @include respond(tab-port) {
+      letter-spacing: 1rem;
+      font-size: 2.5rem;
+    }
   }
 
   &--two {
     display: block;
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: 500;
     letter-spacing: 2rem;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 3rem;
+    }
   }
   &--three {
     display: block;
@@ -35,10 +51,24 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem;
-  font-weight: 700;
+
+  font-weight: 600;
+  text-transform: uppercase;
   display: inline-block;
-  color: $color-11;
-  letter-spacing: 1rem;
+  color: $color-12;
+  letter-spacing: 1.5rem;
+  transition: all 0.2s;
+
+  // border-bottom: 1px solid $color-12;
+
+  background-image: linear-gradient(to right, $color-11, $color-b1, $color-b1);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  @include respond(tab-port) {
+    letter-spacing: 1rem;
+    font-size: 3rem;
+  }
 }
 
 .paragraph {
@@ -47,4 +77,12 @@ body {
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  // margin-bottom: 4rem;
 }

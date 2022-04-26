@@ -4,21 +4,37 @@
 
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-4, 0.3),
-      rgba($color-3, 0.6)
+      rgba($color-5, 0.9),
+      rgba($color-6, 0.6)
     ),
-    url("../img/pic-7.png");
+    url("../img/header11.jpg");
+  // background-image: url("../img/header3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 
   // background-color: $color-3;
 
+  border-left: 1px solid $color-b1;
+  border-right: 1px solid $color-b1;
+
   &__text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    transform: translate(-88%, -35%);
+    // text-align: center;
+
+    @include respond(tab-port) {
+      top: 50%;
+      left: 75%;
+    }
+  }
+
+  &__para {
+    color: $color-3;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    // letter-spacing: 1rem;
   }
 }

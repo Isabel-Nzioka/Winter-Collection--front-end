@@ -1,6 +1,39 @@
 .footer {
   background-color: $color-11;
-  padding: 10rem 0;
+  padding: 15rem 0;
   font-size: 1.4rem;
   color: $color-2;
+
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-5, 0.6),
+    rgba($color-77, 0.3)
+  );
+
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+
+  li {
+    // color: $color-2;
+    // padding: 2rem;
+    margin-bottom: 10px;
+    list-style: none;
+    // display: inline-block;
+
+    &:hover {
+      color: $color-b1;
+      transform: scale(1.2);
+    }
+  }
+
+  i {
+    // background-color: yellow;
+    padding: 1rem;
+    transition: all 600ms;
+
+    &:hover {
+      color: $color-b1;
+      transform: scale(1.5);
+    }
+  }
 }
