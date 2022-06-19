@@ -1,13 +1,13 @@
 .footer {
   background-color: $color-11;
-  padding: 15rem 0;
-  font-size: 1.4rem;
+  padding: 8rem 0;
+  // font-size: 1.4rem;
   color: $color-2;
 
   background-image: linear-gradient(
     to right bottom,
-    rgba($color-5, 0.6),
-    rgba($color-77, 0.3)
+    rgba($color-77, 0.3),
+    rgba($color-11, 0.4)
   );
 
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);

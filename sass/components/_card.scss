@@ -5,7 +5,7 @@
   // background-color: rosybrown;
 
   @include respond(tab-port) {
-    height: 45rem;
+    height: 50rem;
   }
 
   &__newCollection {
