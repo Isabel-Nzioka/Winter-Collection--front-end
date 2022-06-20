@@ -15,7 +15,7 @@ body {
   // z-index: 1000;
 
   @include respond(tab-port) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   &--one {
@@ -23,16 +23,17 @@ body {
     font-size: 6rem;
     letter-spacing: 1.5rem;
     font-weight: 400;
+    margin-bottom: 1rem;
 
     @include respond(tab-port) {
       letter-spacing: 1rem;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
   &--two {
     display: block;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 500;
     letter-spacing: 2rem;
 

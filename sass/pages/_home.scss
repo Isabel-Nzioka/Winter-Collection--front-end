@@ -28,7 +28,8 @@
   // color: rgb(158, 147, 147);
 
   @include respond(tab-port) {
-    // padding: 5rem 10;
+    // padding: 5rem 0 10rem 0;
+    // padding-right: 2rem;
   }
 }
 
