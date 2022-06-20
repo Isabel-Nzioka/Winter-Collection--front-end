@@ -7,9 +7,13 @@ nav {
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  color: $color-6;
-  // background-color: $color-3;
+
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-top: 1px solid red;
   // color: $color-6;
+  // background-color: $color-3;
+  color: $color-b1;
 
   // &.active {
   //   background-color: $color-3;
@@ -54,7 +58,11 @@ nav {
     &:link,
     &:visited {
       padding: 1rem 1rem;
-      color: $color-77;
+      // color: $color-77;
+      // color: $color-b1;
+      // letter-spacing: 2px;
+      font-weight: 700;
+      color: #000000;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
       text-transform: uppercase;
@@ -82,7 +90,18 @@ nav {
 
 @include respond(tab-port) {
   .navigation {
-    font-size: $font-size-medium;
+    // background-color: white;
+    // font-size: $font-size-medium;
+    font-size: 1.4rem;
+
+    &__item {
+      margin-left: 0.6rem;
+    }
+
+    &__logo {
+      // padding-left: 1rem;
+      display: none;
+    }
   }
 
   // body {

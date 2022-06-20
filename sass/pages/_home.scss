@@ -20,8 +20,10 @@
   background-size: cover;
   background-position: top;
 
-  border-left: 1px solid $color-b1;
-  border-right: 1px solid $color-b1;
+  // border-left: 1px solid $color-b1;
+  // border-right: 1px solid $color-b1;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 
   z-index: 20000;
 
@@ -39,8 +41,11 @@
 
   position: relative;
 
-  border-left: 1px solid $color-b1;
-  border-right: 1px solid $color-b1;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+
+  // border-left: 1px solid $color-b1;
+  // border-right: 1px solid $color-b1;
 
   @include respond(tab-port) {
     padding: 5rem 0;
@@ -52,8 +57,10 @@
   padding: 10rem 0;
   background-color: $color-3;
 
-  border-left: 1px solid $color-b1;
-  border-right: 1px solid $color-b1;
+  // border-left: 1px solid $color-b1;
+  // border-right: 1px solid $color-b1;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
 
 .section-instagram {
@@ -62,6 +69,8 @@
 
   margin-bottom: -17rem;
 
-  border-left: 1px solid $color-b1;
-  border-right: 1px solid $color-b1;
+  // border-left: 1px solid $color-b1;
+  // border-right: 1px solid $color-b1;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
