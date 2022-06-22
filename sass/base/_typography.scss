@@ -68,7 +68,16 @@ body {
 
   @include respond(tab-port) {
     letter-spacing: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
+
+    background-image: linear-gradient(
+      to right,
+      $color-b1,
+      $color-11,
+      $color-b1
+    );
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 

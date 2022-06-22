@@ -59,13 +59,16 @@ body {
   color: #860c10;
   letter-spacing: 1.5rem;
   transition: all 0.2s;
-  background-image: linear-gradient(to right, #ec1f27, #0c1117, #0c1117);
+  background-image: linear-gradient(to right, #0c1117, #ec1f27, #0c1117);
   -webkit-background-clip: text;
   color: transparent; }
   @media (max-width: 56.25em) {
     .heading-secondary {
       letter-spacing: 1rem;
-      font-size: 3rem; } }
+      font-size: 2rem;
+      background-image: linear-gradient(to right, #ec1f27, #ec1f27, #0c1117);
+      -webkit-background-clip: text;
+      color: transparent; } }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -178,7 +181,9 @@ i {
     padding: 3rem; }
     @media (max-width: 56.25em) {
       .card__newCollection {
-        height: 50rem; } }
+        height: 50rem;
+        width: 100%;
+        padding: 1.5rem; } }
   .card__picture {
     background-size: cover;
     height: 40rem;
@@ -254,7 +259,6 @@ i {
 
 .story {
   width: 100%;
-  margin: 0 auto;
   border-radius: 3px;
   padding: 4rem;
   font-size: 1.6rem;
@@ -269,6 +273,16 @@ i {
     height: 100%;
     border-top-left-radius: 15rem;
     border-top-right-radius: 15rem; }
+  @media (max-width: 56.25em) {
+    .story .story {
+      padding: 2rem; }
+    .story__shape {
+      width: 25rem;
+      height: 25rem; }
+    .story__text {
+      padding-top: 15rem; }
+    .story__caption {
+      display: none; } }
   .story__text {
     padding-top: 10rem; }
   .story__caption {
@@ -379,7 +393,10 @@ nav {
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  color: #161616; }
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-top: 1px solid red;
+  color: #0c1117; }
 
 .navigation {
   display: flex;
@@ -403,7 +420,8 @@ nav {
     margin: 1rem; }
   .navigation__link:link, .navigation__link:visited {
     padding: 1rem 1rem;
-    color: #2c2b2b;
+    font-weight: 700;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     text-transform: uppercase; }
@@ -412,7 +430,11 @@ nav {
 
 @media (max-width: 56.25em) {
   .navigation {
-    font-size: 1.2rem; } }
+    font-size: 1.4rem; }
+    .navigation__item {
+      margin-left: 0.6rem; }
+    .navigation__logo {
+      display: none; } }
 
 .section-about {
   padding: 10rem 0 18rem 0;
@@ -420,16 +442,16 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  border-left: 1px solid #0c1117;
-  border-right: 1px solid #0c1117;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
   z-index: 20000; }
 
 .section-newCollection {
   background-color: #fff;
   padding: 10rem 0;
   position: relative;
-  border-left: 1px solid #0c1117;
-  border-right: 1px solid #0c1117; }
+  border-left: 1px solid red;
+  border-right: 1px solid red; }
   @media (max-width: 56.25em) {
     .section-newCollection {
       padding: 5rem 0; } }
@@ -438,12 +460,12 @@ nav {
   position: relative;
   padding: 10rem 0;
   background-color: #fff8f2;
-  border-left: 1px solid #0c1117;
-  border-right: 1px solid #0c1117; }
+  border-left: 1px solid red;
+  border-right: 1px solid red; }
 
 .section-instagram {
   background-color: #fbd8df;
   padding: 15rem 0 25rem 0;
   margin-bottom: -17rem;
-  border-left: 1px solid #0c1117;
-  border-right: 1px solid #0c1117; }
+  border-left: 1px solid red;
+  border-right: 1px solid red; }
