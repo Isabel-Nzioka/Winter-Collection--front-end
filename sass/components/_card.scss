@@ -1,13 +1,15 @@
 .card {
   height: 50rem;
   position: relative;
-  width: 50rem;
+  width: 100%;
   box-sizing: border-box;
 
-  // background-color: rgb(180, 176, 176);
+  // background-color: rgb(56, 35, 35);
 
   @include respond(tab-port) {
     height: 38rem;
+    margin-left: 3rem;
+    width: 80%;
   }
 
   &__newCollection {
@@ -16,7 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    // width: 100%;
+    width: 100%;
     border-radius: 3px;
     overflow: hidden;
 
@@ -29,7 +31,7 @@
       flex-direction: column;
       justify-content: space-between;
       height: 38rem;
-      width: 100%;
+      // width: 100%;
       // padding: 1.5rem;
       // background-color: rgb(165, 189, 62);
       padding: 1rem;
