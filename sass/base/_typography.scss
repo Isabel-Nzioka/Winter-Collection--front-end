@@ -83,10 +83,17 @@ body {
 
 .paragraph {
   font-size: $default-font-size;
+  color: $color-black;
+  letter-spacing: 1.6px;
+  // font-weight: 400;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+
+.paragraph p {
+  padding: 9px;
 }
 
 .heading-tertiary {

@@ -1,48 +1,52 @@
 .section-about {
   // background-color: $color-3;
   padding: 10rem 0 18rem 0;
-
-  // background-image: linear-gradient(
-  //   to right bottom,
-  //   rgba($color-6, 0.6),
-  //   rgba($color-5, 0.5)
-  // );
-  // // url("../img/header11.jpg");
+  // background-color: $color-b2;
 
   background-image: linear-gradient(
       to right bottom,
-      rgba($color-b2, 0.9),
-      rgba($color-6, 0.8)
+      rgba($color-6, 0.6),
+      rgba($color-5, 0.5)
     ),
-    url("../img/abt10.png");
-  // background-image: url("../img/header3.jpg");
+    url("../img/bg14.jpg");
+
+  //6 8
+
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-b2, 0.9),
+  //     rgba($color-6, 0.8)
+  //   ),
+  //   url("../img/love4.jpg");
+  // background-image: url("../img/bg2.jpg");
+  // background-image: url("../img/abt1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  // background-attachment: fixed;
 
   // border-left: 1px solid $color-b1;
   // border-right: 1px solid $color-b1;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 
   z-index: 20000;
 
   // color: rgb(158, 147, 147);
 
   @include respond(tab-port) {
-    // padding: 5rem 0 10rem 0;
-    // padding-right: 2rem;
+    padding: 10rem 1rem 18rem 2rem;
   }
 }
 
 .section-newCollection {
-  background-color: $color-2;
+  background-color: $color-3;
   padding: 10rem 0;
 
   position: relative;
 
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 
   // border-left: 1px solid $color-b1;
   // border-right: 1px solid $color-b1;
@@ -59,8 +63,8 @@
 
   // border-left: 1px solid $color-b1;
   // border-right: 1px solid $color-b1;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .section-instagram {
@@ -71,6 +75,6 @@
 
   // border-left: 1px solid $color-b1;
   // border-right: 1px solid $color-b1;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }

@@ -18,6 +18,8 @@
     width: 40rem;
     height: 40rem;
     float: left;
+
+    transform: translateX(-50%);
   }
 
   &__img {
@@ -44,6 +46,21 @@
 
   &__text {
     padding-top: 10rem;
+
+    transform: translateX(50%);
+  }
+
+  &__text,
+  &__shape {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+
+    opacity: 0;
+  }
+
+  &__text.appear,
+  &__shape.appear {
+    transform: translateX(0);
+    opacity: 1;
   }
 
   &__caption {

@@ -1,3 +1,10 @@
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in; }
+
+.fade-in.appear {
+  opacity: 1; }
+
 *,
 *::after,
 *::before {
@@ -9,13 +16,14 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #161616;
+  color: #383737;
   line-height: 1.7; }
 
 .heading-primary {
@@ -71,9 +79,14 @@ body {
       color: transparent; } }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  color: #000;
+  letter-spacing: 1.6px; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+
+.paragraph p {
+  padding: 9px; }
 
 .heading-tertiary {
   font-weight: 700;
@@ -165,18 +178,21 @@ i {
   background-repeat: no-repeat; }
 
 .card {
-  height: 50rem;
+  height: 52rem;
   position: relative;
-  width: 50rem;
+  width: 100%;
   box-sizing: border-box; }
   @media (max-width: 56.25em) {
     .card {
-      height: 38rem; } }
+      height: 38rem;
+      margin-left: 3rem;
+      width: 80%; } }
   .card__newCollection {
-    height: 50rem;
+    height: 52rem;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     border-radius: 3px;
     overflow: hidden;
     padding: 3rem; }
@@ -186,7 +202,6 @@ i {
         flex-direction: column;
         justify-content: space-between;
         height: 38rem;
-        width: 100%;
         padding: 1rem; } }
   .card__picture {
     background-size: cover;
@@ -216,12 +231,16 @@ i {
     .card__picture--5 {
       background-image: url(../img/adb1.png); }
     .card__picture--6 {
-      background-image: url(../img/image-2.png); }
+      background-image: url(../img/image-2.png);
+      background-position: bottom; }
     .card__picture--7 {
-      background-image: url(../img/img-11.png); }
+      background-image: url(../img/img-11.png);
+      background-position: bottom; }
     .card__picture:hover {
       transform: translateY(-0.9rem) scale(1.0025);
       box-shadow: 0 0.3em 2rem -1rem rgba(0, 0, 0, 0.5); }
+    .card__picture--7 {
+      background-position: default; }
   .card__details {
     padding: 3rem;
     display: flex;
@@ -236,6 +255,15 @@ i {
     font-size: 2rem;
     font-weight: 300;
     padding-left: 0.2rem; }
+
+.down {
+  transform: translateY(60%);
+  transition: opacity 380ms ease-in, transform 200ms ease-in;
+  opacity: 0; }
+
+.down.appear {
+  transform: translateX(0);
+  opacity: 1; }
 
 .composition {
   position: relative; }
@@ -253,19 +281,33 @@ i {
       top: -2rem; }
 
 .about__img {
-  width: 60%;
-  border-top-left-radius: 15rem;
-  border-top-right-radius: 15rem;
+  width: 70%;
   margin: 3rem;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.4);
   transition: all ease-out; }
   .about__img:hover {
-    outline: 6px solid rgba(251, 216, 223, 0.9), rgba(22, 22, 22, 0.8);
-    outline-offset: 1.5rem;
+    box-shadow: 0 4.5rem 4rem rgba(0, 0, 0, 0.4);
     transform: translateY(-0.9rem) scale(1.0025); }
 
+.right {
+  border-top-right-radius: 15rem;
+  border-bottom-left-radius: 15rem;
+  transform: translateX(50%); }
+
 .left {
-  float: center; }
+  border-top-left-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+  transform: translateX(-50%); }
+
+.right,
+.left {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0; }
+
+.right.appear,
+.left.appear {
+  opacity: 1;
+  transform: translateX(0); }
 
 .story {
   width: 100%;
@@ -278,7 +320,8 @@ i {
   .story__shape {
     width: 40rem;
     height: 40rem;
-    float: left; }
+    float: left;
+    transform: translateX(-50%); }
   .story__img {
     height: 100%;
     border-top-left-radius: 15rem;
@@ -294,7 +337,14 @@ i {
     .story__caption {
       display: none; } }
   .story__text {
-    padding-top: 10rem; }
+    padding-top: 10rem;
+    transform: translateX(50%); }
+  .story__text, .story__shape {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0; }
+  .story__text.appear, .story__shape.appear {
+    transform: translateX(0);
+    opacity: 1; }
   .story__caption {
     position: absolute;
     top: 60%;
@@ -376,7 +426,7 @@ i {
 .header {
   height: 100vh;
   margin: 0 auto;
-  background-image: linear-gradient(to right bottom, rgba(82, 33, 22, 0.9), rgba(22, 22, 22, 0.6)), url("../img/header11.jpg");
+  background-image: linear-gradient(to right bottom, rgba(82, 33, 22, 0.9), rgba(56, 55, 55, 0.6)), url("../img/header11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -402,9 +452,8 @@ nav {
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
-  border-top: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   color: #0c1117; }
 
 .navigation {
@@ -447,20 +496,23 @@ nav {
 
 .section-about {
   padding: 10rem 0 18rem 0;
-  background-image: linear-gradient(to right bottom, rgba(251, 216, 223, 0.9), rgba(22, 22, 22, 0.8)), url("../img/abt10.png");
+  background-image: linear-gradient(to right bottom, rgba(56, 55, 55, 0.6), rgba(82, 33, 22, 0.5)), url("../img/bg14.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   z-index: 20000; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      padding: 10rem 1rem 18rem 2rem; } }
 
 .section-newCollection {
-  background-color: #fff;
+  background-color: #fff8f2;
   padding: 10rem 0;
   position: relative;
-  border-left: 1px solid red;
-  border-right: 1px solid red; }
+  border-left: 1px solid black;
+  border-right: 1px solid black; }
   @media (max-width: 56.25em) {
     .section-newCollection {
       padding: 5rem 0; } }
@@ -469,12 +521,12 @@ nav {
   position: relative;
   padding: 10rem 0;
   background-color: #fff8f2;
-  border-left: 1px solid red;
-  border-right: 1px solid red; }
+  border-left: 1px solid black;
+  border-right: 1px solid black; }
 
 .section-instagram {
-  background-color: #fbd8df;
+  background-color: #e9e0e2;
   padding: 15rem 0 25rem 0;
   margin-bottom: -17rem;
-  border-left: 1px solid red;
-  border-right: 1px solid red; }
+  border-left: 1px solid black;
+  border-right: 1px solid black; }

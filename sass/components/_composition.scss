@@ -25,22 +25,46 @@
 }
 
 .about__img {
-  width: 60%;
+  width: 70%;
   // padding: 2rem;
-  border-top-left-radius: 15rem;
-  border-top-right-radius: 15rem;
+
+  // border-top-right-radius: 15rem;
   margin: 3rem;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+  box-shadow: 0 2.5rem 4rem rgba($color-black, 0.4);
   transition: all ease-out;
 
   &:hover {
-    outline: 6px solid rgba($color-b2, 0.9), rgba($color-6, 0.8);
-    outline-offset: 1.5rem;
+    box-shadow: 0 4.5rem 4rem rgba($color-black, 0.4);
+    // outline: 6px solid rgba($color-b2, 0.9), rgba($color-6, 0.8);
+    // outline-offset: 1.5rem;
     transform: translateY(-0.9rem) scale(1.0025);
   }
 }
+.right {
+  border-top-right-radius: 15rem;
+  border-bottom-left-radius: 15rem;
+
+  transform: translateX(50%);
+}
 .left {
-  float: center;
+  // float: center;
+  border-top-left-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+
+  transform: translateX(-50%);
+}
+
+.right,
+.left {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+
+  opacity: 0;
+}
+
+.right.appear,
+.left.appear {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 // .stories {
