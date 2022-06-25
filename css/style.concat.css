@@ -2131,6 +2131,7 @@ body {
     .heading-secondary {
       letter-spacing: 1rem;
       font-size: 2rem;
+      padding: 0 1rem 0 1rem;
       background-image: linear-gradient(to right, #0c1117, #ec1f27, #0c1117);
       -webkit-background-clip: text;
       color: transparent; } }
@@ -2288,7 +2289,7 @@ i {
     .card__picture--5 {
       background-image: url(../img/adb1.png); }
     .card__picture--6 {
-      background-image: url(../img/image-2.png);
+      background-image: url(../img/background-3.jpg);
       background-position: bottom; }
     .card__picture--7 {
       background-image: url(../img/img-11.png);
@@ -2355,6 +2356,14 @@ i {
   border-top-left-radius: 15rem;
   border-bottom-right-radius: 15rem;
   transform: translateX(-50%); }
+
+@media (max-width: 56.25em) {
+  .right {
+    border-top-right-radius: 7rem;
+    border-bottom-left-radius: 7rem; }
+  .left {
+    border-top-left-radius: 7rem;
+    border-bottom-right-radius: 7rem; } }
 
 .right,
 .left {
@@ -2497,7 +2506,8 @@ i {
     @media (max-width: 56.25em) {
       .header__text {
         top: 60%;
-        left: 75%; } }
+        left: 75%;
+        padding-left: 4rem; } }
   .header__para {
     color: #fff8f2;
     font-weight: 400;
@@ -2553,7 +2563,7 @@ nav {
 
 .section-about {
   padding: 10rem 0 18rem 0;
-  background-image: linear-gradient(to right bottom, rgba(56, 55, 55, 0.6), rgba(82, 33, 22, 0.5)), url("../img/bg14.jpg");
+  background-image: linear-gradient(to right bottom, rgba(56, 55, 55, 0.6), rgba(82, 33, 22, 0.5)), url("../img/bg4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;

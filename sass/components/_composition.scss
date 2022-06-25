@@ -54,6 +54,18 @@
   transform: translateX(-50%);
 }
 
+@include respond(tab-port) {
+  .right {
+    border-top-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+  }
+
+  .left {
+    border-top-left-radius: 7rem;
+    border-bottom-right-radius: 7rem;
+  }
+}
+
 .right,
 .left {
   transition: opacity 250ms ease-in, transform 400ms ease-in;
