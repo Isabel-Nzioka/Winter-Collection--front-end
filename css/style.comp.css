@@ -380,18 +380,35 @@ i {
   background-image: linear-gradient(to right bottom, rgba(44, 43, 43, 0.3), rgba(236, 31, 39, 0.4));
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); }
+  .footer a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 600ms; }
+    .footer a:hover {
+      border-bottom-width: 2px;
+      border-bottom-color: black;
+      border-bottom-style: groove;
+      padding-bottom: 4px;
+      text-transform: uppercase; }
+  .footer h3 {
+    text-decoration: underline; }
   .footer li {
     margin-bottom: 10px;
     list-style: none; }
-    .footer li:hover {
-      color: #0c1117;
-      transform: scale(1.2); }
   .footer i {
     padding: 1rem;
     transition: all 600ms; }
     .footer i:hover {
       color: #0c1117;
       transform: scale(1.5); }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 3rem 4rem;
+      clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%); }
+      .footer li {
+        margin-bottom: 2px; }
+      .footer .contact {
+        margin-top: 11rem; } }
 
 .row {
   max-width: 114rem;

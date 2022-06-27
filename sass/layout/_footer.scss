@@ -13,17 +13,29 @@
   -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 600ms;
+
+    &:hover {
+      border-bottom-width: 2px;
+      border-bottom-color: black;
+      border-bottom-style: groove;
+      padding-bottom: 4px;
+      text-transform: uppercase;
+    }
+  }
+  h3 {
+    text-decoration: underline;
+  }
+
   li {
     // color: $color-2;
     // padding: 2rem;
     margin-bottom: 10px;
     list-style: none;
     // display: inline-block;
-
-    &:hover {
-      color: $color-b1;
-      transform: scale(1.2);
-    }
   }
 
   i {
@@ -34,6 +46,23 @@
     &:hover {
       color: $color-b1;
       transform: scale(1.5);
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 4rem;
+
+    // -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%)
+
+    // -webkit-clip-path: polygon(0 0%, 100% 0);
+    clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%);
+
+    li {
+      margin-bottom: 2px;
+    }
+
+    .contact {
+      margin-top: 11rem;
     }
   }
 }
