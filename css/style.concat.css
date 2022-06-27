@@ -2070,7 +2070,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   box-sizing: border-box;
@@ -2317,7 +2318,7 @@ i {
 .down {
   transform: translateY(60%);
   transition: opacity 380ms ease-in, transform 200ms ease-in;
-  opacity: 0; }
+  opacity: 1; }
 
 .down.appear {
   transform: translateX(0);
@@ -2350,7 +2351,7 @@ i {
 .right {
   border-top-right-radius: 15rem;
   border-bottom-left-radius: 15rem;
-  transform: translateX(50%); }
+  transform: translateX(40%); }
 
 .left {
   border-top-left-radius: 15rem;
@@ -2368,7 +2369,7 @@ i {
 .right,
 .left {
   transition: opacity 250ms ease-in, transform 400ms ease-in;
-  opacity: 0; }
+  opacity: 1; }
 
 .right.appear,
 .left.appear {
@@ -2398,16 +2399,13 @@ i {
     .story__shape {
       width: 25rem;
       height: 25rem; }
-    .story__text {
-      padding-top: 15rem; }
     .story__caption {
       display: none; } }
   .story__text {
-    padding-top: 10rem;
-    transform: translateX(50%); }
+    transform: translateX(40%); }
   .story__text, .story__shape {
     transition: opacity 250ms ease-in, transform 400ms ease-in;
-    opacity: 0; }
+    opacity: 1; }
   .story__text.appear, .story__shape.appear {
     transform: translateX(0);
     opacity: 1; }
