@@ -44,7 +44,7 @@
   border-top-right-radius: 15rem;
   border-bottom-left-radius: 15rem;
 
-  transform: translateX(50%);
+  transform: translateX(40%);
 }
 .left {
   // float: center;
@@ -70,7 +70,7 @@
 .left {
   transition: opacity 250ms ease-in, transform 400ms ease-in;
 
-  opacity: 0;
+  opacity: 1;
 }
 
 .right.appear,

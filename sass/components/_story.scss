@@ -37,7 +37,7 @@
       height: 25rem;
     }
     &__text {
-      padding-top: 15rem;
+      // padding-top: 15rem;
     }
     &__caption {
       display: none;
@@ -45,16 +45,16 @@
   }
 
   &__text {
-    padding-top: 10rem;
+    // padding-top: 10rem;
 
-    transform: translateX(50%);
+    transform: translateX(40%);
   }
 
   &__text,
   &__shape {
     transition: opacity 250ms ease-in, transform 400ms ease-in;
 
-    opacity: 0;
+    opacity: 1;
   }
 
   &__text.appear,
